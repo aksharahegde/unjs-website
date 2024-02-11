@@ -17,16 +17,12 @@ if (error.value) {
 
 useSeoMeta({
   title: page.value?.title,
-  ogTitle: page.value?.title,
   description: page.value?.description,
-  ogDescription: page.value?.description,
 })
-
 defineOgImageComponent('OgImagePage', {
-  title: page.value?.title,
-  description: page.value?.description,
   illustration: '/assets/header/dark/search.png',
 })
+useTrackPageview()
 
 const query = ref<string>(route.query.q as string || '')
 const queryDebounced = ref<string>(query.value)
@@ -160,7 +156,7 @@ function selectFirstOption() {
                 v-slot="{ active }"
                 :value="option"
               >
-                <SearchItem
+                <AppSearchItem
                   :active="active"
                   :item="option"
                 />
@@ -171,7 +167,7 @@ function selectFirstOption() {
                 v-slot="{ active }"
                 :value="childOption"
               >
-                <SearchItem
+                <AppSearchItem
                   :active="active"
                   :item="childOption"
                   child
