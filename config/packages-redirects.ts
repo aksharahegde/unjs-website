@@ -1,5 +1,12 @@
 /** Do not edit manually. Use `jiti bin generate packages-redirects`. */
 export default {
+  '/automd': {
+    redirect: {
+      to: '/packages/automd',
+      statusCode: 302,
+    },
+  },
+
   '/bundle-runner': {
     redirect: {
       to: '/packages/bundle-runner',
@@ -28,6 +35,13 @@ export default {
     },
   },
 
+  '/confbox': {
+    redirect: {
+      to: '/packages/confbox',
+      statusCode: 302,
+    },
+  },
+
   '/consola': {
     redirect: {
       to: '/packages/consola',
@@ -38,6 +52,20 @@ export default {
   '/cookie-es': {
     redirect: {
       to: '/packages/cookie-es',
+      statusCode: 302,
+    },
+  },
+
+  '/db0': {
+    redirect: {
+      to: '/packages/db0',
+      statusCode: 302,
+    },
+  },
+
+  '/crossws': {
+    redirect: {
+      to: '/packages/crossws',
       statusCode: 302,
     },
   },
@@ -157,6 +185,13 @@ export default {
   '/magicast': {
     redirect: {
       to: '/packages/magicast',
+      statusCode: 302,
+    },
+  },
+
+  '/mdbox': {
+    redirect: {
+      to: '/packages/mdbox',
       statusCode: 302,
     },
   },
@@ -315,6 +350,13 @@ export default {
     },
   },
 
+  '/undocs': {
+    redirect: {
+      to: '/packages/undocs',
+      statusCode: 302,
+    },
+  },
+
   '/unenv': {
     redirect: {
       to: '/packages/unenv',
@@ -374,6 +416,13 @@ export default {
   '/untyped': {
     redirect: {
       to: '/packages/untyped',
+      statusCode: 302,
+    },
+  },
+
+  '/unwasm': {
+    redirect: {
+      to: '/packages/unwasm',
       statusCode: 302,
     },
   },

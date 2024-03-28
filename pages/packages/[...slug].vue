@@ -123,6 +123,9 @@ defineOgImageComponent('OgImagePackage', {
               Resources
             </template>
             <template #links>
+              <ProseNavGroupLink v-if="page.npm" :to="`/relations?u[]=${page.npm.name}`" icon="i-ph-graph">
+                Explore Relations
+              </ProseNavGroupLink>
               <ProseNavGroupLink v-if="page.npm" :to="toNpmPackage(page.npm.name)" target="_blank" icon="i-simple-icons-npm">
                 Discover on npm
               </ProseNavGroupLink>
@@ -163,7 +166,6 @@ defineOgImageComponent('OgImagePackage', {
       </ProseNavGroup> -->
       </template>
     </Prose>
+    <PackagesLatestNews v-if="page.title" class="mt-12" :name="page.title" />
   </Main>
-
-  <!-- <PackageLatestNews class="xl:row-start-2 col-start-2" :name="page.title" /> -->
 </template>
